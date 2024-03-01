@@ -95,12 +95,12 @@ fun Login(navController: NavHostController){
 
         Button(onClick = {
 
-            //if (loginValue == "etudiant" && mdpValue == "AzertY") {
+            if (loginValue == "etudiant" && mdpValue == "AzertY") {
                 Toast.makeText(context, "Connexion réussie", Toast.LENGTH_SHORT).show()
                 navController.navigate("profil/$loginValue/$mdpValue")
-            //} else {
-               // Toast.makeText(context, "Identifiants incorrects", Toast.LENGTH_SHORT).show()
-            //}
+            } else {
+               Toast.makeText(context, "Identifiants incorrects", Toast.LENGTH_SHORT).show()
+            }
         }) {
             Text(text = "Valider", fontSize = 17.sp)
         }
